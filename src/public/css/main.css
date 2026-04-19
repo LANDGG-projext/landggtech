@@ -1,0 +1,134 @@
+.dobra-1-hero { 
+    text-align: center; 
+    margin-bottom: var(--espaco-xl); 
+}
+
+.hero-content { 
+    margin-bottom: var(--espaco-lg); 
+}
+
+.hero-content h1 { 
+    font-size: 2.5rem; 
+    color: var(--roxo-claro); 
+    margin-bottom: var(--espaco-sm); 
+}
+
+.dobra-1-hero img { 
+    max-width: 100%; 
+    border-radius: var(--raio-lg); 
+    border: 1px solid var(--borda-clara); 
+    box-shadow: var(--sombra-roxa); 
+}
+
+.dobra-2-mvv, 
+.dobra-3-acoes, 
+.dobra-4-equipe, 
+.dobra-5-localizacao { 
+    margin-bottom: var(--espaco-xl); 
+}
+
+.dobra-2-mvv h2, 
+.dobra-3-acoes h2, 
+.dobra-4-equipe h2, 
+.dobra-5-localizacao h2 { 
+    text-align: center; 
+    color: var(--roxo-claro); 
+    margin-bottom: var(--espaco-lg); 
+}
+
+.mvv-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: var(--espaco-lg); 
+}
+
+.mvv-item { 
+    background: var(--bg-cartao); 
+    padding: var(--espaco-lg); 
+    border-radius: var(--raio-md); 
+    border: 1px solid var(--borda-clara); 
+    text-align: center; 
+}
+
+.mvv-item h3 { 
+    color: var(--texto-primario); 
+    margin-bottom: var(--espaco-sm); 
+}
+
+.cards-container { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: var(--espaco-lg); 
+}
+
+.card-acao, 
+.card-persona { 
+    background: var(--bg-cartao); 
+    padding: var(--espaco-lg); 
+    border-radius: var(--raio-md); 
+    border: 1px solid var(--borda-clara); 
+    text-align: center; 
+    text-decoration: none; 
+    color: inherit; 
+    transition: var(--transicao-padrao); 
+    display: block; 
+}
+
+.card-acao:hover, 
+.card-persona:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--roxo-claro); 
+    box-shadow: var(--sombra-roxa); 
+}
+
+.card-acao img { 
+    width: 64px; 
+    height: 64px; 
+    margin-bottom: var(--espaco-md); 
+}
+
+.card-persona img { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-bottom: var(--espaco-md); 
+    border: 2px solid var(--roxo-escuro); 
+}
+
+.card-acao h3, 
+.card-persona h3 { 
+    color: var(--texto-primario); 
+    margin-bottom: var(--espaco-sm); 
+    font-size: 1.2rem; 
+}
+
+.card-persona p { 
+    font-size: 0.9rem; 
+    color: var(--texto-secundario); 
+}
+
+.mapa-container { 
+    border-radius: var(--raio-md); 
+    overflow: hidden; 
+    border: 1px solid var(--borda-clara); 
+    margin-top: var(--espaco-md); 
+}
+
+.lista-valores {
+    list-style-type: none;
+    text-align: left;
+    margin-top: var(--espaco-md);
+    padding: 0;
+}
+
+.lista-valores li {
+    margin-bottom: var(--espaco-sm);
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.lista-valores strong {
+    color: var(--texto-primario);
+}
