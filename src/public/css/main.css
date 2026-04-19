@@ -114,3 +114,21 @@
     border: 1px solid var(--borda-clara); 
     margin-top: var(--espaco-md); 
 }
+
+.lista-valores {
+    list-style-type: none;
+    text-align: left;
+    margin-top: var(--espaco-md);
+    padding: 0;
+}
+
+.lista-valores li {
+    margin-bottom: var(--espaco-sm);
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.lista-valores strong {
+    color: var(--texto-primario);
+}

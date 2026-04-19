@@ -20,15 +20,21 @@
             <div class="mvv-container">
                 <div class="mvv-item">
                     <h3>Missão</h3>
-                    <p>Ensinar lógica de programação desplugada para crianças, promovendo educação tecnológica sem depender de telas.</p>
+                    <p>Transformar o aprendizado de tecnologia em uma experiência lúdica e acessível, ensinando os fundamentos da programação de forma desplugada para desenvolver o raciocínio crítico e criativo das crianças, independentemente de dispositivos digitais.</p>
                 </div>
                 <div class="mvv-item">
                     <h3>Visão</h3>
-                    <p>Ser referência no ensino básico de tecnologia e pensamento computacional na região.</p>
+                    <p>Ser a startup referência em educação tecnológica humanizada, provando que a lógica da inovação nasce na mente e na colaboração, alcançando escolas em todo o país com métodos que conectam crianças ao futuro de forma saudável e inclusiva.</p>
                 </div>
                 <div class="mvv-item">
                     <h3>Valores</h3>
-                    <p>Acessibilidade, colaboração e inovação educacional.</p>
+                    <ul class="lista-valores">
+                        <li><strong>Educação com Propósito:</strong> Priorizar o aprendizado real acima de ferramentas tecnológicas.</li>
+                        <li><strong>Criatividade "Fora da Caixa":</strong> Enxergar tecnologia em conceitos, movimentos e lógica, não apenas em telas.</li>
+                        <li><strong>Acessibilidade e Inclusão:</strong> Democratizar o ensino de programação para ambientes com ou sem recursos digitais.</li>
+                        <li><strong>Colaboração:</strong> Valorizar o trabalho em equipe (amigos e escola) como motor da inovação.</li>
+                        <li><strong>Ética e Infância:</strong> Respeitar o tempo e o desenvolvimento saudável da criança no contato com o mundo digital.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -63,33 +69,33 @@
             <h2>Nossa Equipe</h2>
             <div class="cards-container">
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/ana.jpg" alt="Ana Julia">
-                    <h3>Ana Julia</h3>
+                    <img src="src/public/img/ana.jpg" alt="Ana Julia Pires Oliveira">
+                    <h3>Ana Julia Pires Oliveira</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/gabriel-costa.jpg" alt="Gabriel Costa">
-                    <h3>Gabriel Costa</h3>
+                    <img src="src/public/img/gabriel-costa.jpg" alt="Gabriel de Souza Costa">
+                    <h3>Gabriel de Souza Costa</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/gabriel-feitoza.jpg" alt="Gabriel Feitoza">
-                    <h3>Gabriel Feitoza</h3>
+                    <img src="src/public/img/gabriel-feitoza.jpg" alt="Gabriel Feitoza da Silva">
+                    <h3>Gabriel Feitoza da Silva</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/lucas.jpg" alt="Lucas">
-                    <h3>Lucas Batista</h3>
+                    <img src="src/public/img/lucas.jpg" alt="Lucas Bento da Silva Batista">
+                    <h3>Lucas Bento da Silva Batista</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/maria.jpg" alt="Maria Eduarda">
-                    <h3>Maria Eduarda</h3>
+                    <img src="src/public/img/maria.jpg" alt="Maria Eduarda Alves Selvatti">
+                    <h3>Maria Eduarda Alves Selvatti</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/nathalie.jpg" alt="Nathalie">
-                    <h3>Nathalie Xavier</h3>
+                    <img src="src/public/img/nathalie.jpg" alt="Nathalie Gonçalves Xavier">
+                    <h3>Nathalie Gonçalves Xavier</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
             </div>
