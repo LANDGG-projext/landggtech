@@ -10,7 +10,7 @@
             }
         ?>
     </title>
-    
+    <link rel="icon" type="image/png" href="src/public/img/logo.jpg">
     <link rel="stylesheet" href="src/public/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     

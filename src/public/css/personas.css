@@ -1,0 +1,53 @@
+.page-content h1 { 
+    text-align: center; 
+    color: var(--roxo-claro); 
+    margin-bottom: var(--espaco-xl); 
+}
+
+.lista-personas { 
+    display: flex; 
+    flex-direction: column; 
+    gap: var(--espaco-lg); 
+}
+
+.persona-perfil { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--espaco-lg); 
+    background: var(--bg-cartao); 
+    padding: var(--espaco-lg); 
+    border-radius: var(--raio-lg); 
+    border: 1px solid var(--borda-clara); 
+    transition: var(--transicao-padrao); 
+}
+
+.persona-perfil:hover { 
+    border-color: var(--roxo-claro); 
+    box-shadow: var(--sombra-roxa); 
+}
+
+.persona-perfil img { 
+    width: 150px; 
+    height: 150px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid var(--roxo-escuro); 
+    flex-shrink: 0; 
+}
+
+.persona-info h2 { 
+    color: var(--texto-primario); 
+    margin-bottom: var(--espaco-sm); 
+}
+
+.persona-info p { 
+    color: var(--texto-secundario); 
+    line-height: 1.6; 
+}
+
+@media (max-width: 768px) {
+    .persona-perfil { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+}
