@@ -1,17 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LANDGG Technology - Educação tecnológica através do pensamento computacional puro e criativo.">
-    <meta name="theme-color" content="#000000">
-    <title>LANDGG | Technology Unplugged</title>
-    <link rel="stylesheet" href="src/public/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
+<?php 
+    $css_especifico = 'index.css'; 
+    include_once 'src/components/head.php'; 
+?>
     <main class="page-wrapper">
         <div class="container">
 
@@ -35,18 +25,17 @@
 
             <p class="description">
                 Desplugue a tela, conecte a mente.<br>
-                <strong class="highlight">Educação tecnológica</strong> através do 
-                pensamento computacional puro e criativo.
+                <strong class="highlight">Educação tecnológica</strong> sem depender de telas.
             </p>
 
-            <a href="#metodologia" class="btn-cta" aria-label="Conheça nossa metodologia">
+            <a href="main.php" class="btn-cta" aria-label="Conheça nossa metodologia">
                 CONHEÇA NOSSA METODOLOGIA
             </a>
 
             <footer class="footer-tag">
                 <span>Landgg</span>
                 <span class="separator">•</span>
-                <span>Educação Fora das Telas</span>
+                <span>Projeto de Extensão</span>
                 <span class="separator">•</span>
                 <time datetime="2026">2026</time>
             </footer>
