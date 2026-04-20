@@ -1,6 +1,6 @@
-<?php 
-    $css_especifico = 'index.css'; 
-    include_once 'src/components/head.php'; 
+<?php
+    $css_especifico = 'index.css';
+    include_once 'src/components/head.php';
 ?>
     <main class="page-wrapper">
         <div class="container">
@@ -11,10 +11,10 @@
 
             <div class="logo-wrapper">
                 <div class="logo-container">
-                    <img 
-                        src="src/public/img/logo.jpg" 
-                        alt="LANDGG Technology - Logo" 
-                        width="450" 
+                    <img
+                        src="src/public/img/logo-removebg-preview.png"
+                        alt="LANDGG Technology - Logo"
+                        width="450"
                         height="auto"
                         loading="eager"
                     >

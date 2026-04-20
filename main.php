@@ -1,8 +1,8 @@
-<?php 
+<?php
     $css_especifico = 'main.css';
     $titulo_pagina = 'Página Principal';
-    include_once 'src/components/head.php'; 
-    include_once 'src/components/navbar.php'; 
+    include_once 'src/components/head.php';
+    include_once 'src/components/navbar.php';
 ?>
 
 <main class="page-content">
@@ -43,22 +43,22 @@
             <h2>Nossas Ações de Extensão</h2>
             <div class="cards-container">
                 <a href="quemsomos.php#consultoria" class="card-acao">
-                    <img src="src/public/img/icon-consultoria.png" alt="Ícone Consultoria">
+                    <img src="src/public/img/consultoria.svg" alt="Ícone Consultoria">
                     <h3>Consultoria</h3>
                     <p>Orientação técnica para projetos tecnológicos.</p>
                 </a>
                 <a href="quemsomos.php#capacitacao" class="card-acao">
-                    <img src="src/public/img/icon-capacitacao.png" alt="Ícone Capacitação">
+                    <img src="src/public/img/capacitacao.svg" alt="Ícone Capacitação">
                     <h3>Capacitação</h3>
                     <p>Treinamentos em lógica de programação e ferramentas.</p>
                 </a>
-                <a href="quemsomos.php#servicos" class="card-acao">
-                    <img src="src/public/img/icon-servico.png" alt="Ícone Prestação de Serviço">
-                    <h3>Prestação de Serviço</h3>
-                    <p>Desenvolvimento e manutenção de sistemas web e IoT.</p>
+                <a href="quemsomos.php#solucao" class="card-acao">
+                    <img src="src/public/img/dev.svg" alt="Ícone Solução">
+                    <h3>Desenvolvimento de solução</h3>
+                    <p>Desenvolvimento de material para soluções desplugadas.</p>
                 </a>
                 <a href="quemsomos.php#projetos" class="card-acao">
-                    <img src="src/public/img/icon-projeto.png" alt="Ícone Projetos de Engenharia">
+                    <img src="src/public/img/engenharia.svg" alt="Ícone Projetos de Engenharia">
                     <h3>Projetos de Engenharia</h3>
                     <p>Soluções completas englobando hardware e software.</p>
                 </a>
@@ -69,32 +69,32 @@
             <h2>Nossa Equipe</h2>
             <div class="cards-container">
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/ana.jpg" alt="Ana Julia Pires Oliveira">
+                    <img src="src/public/img/ana.jpeg" alt="Ana Julia Pires Oliveira">
                     <h3>Ana Julia Pires Oliveira</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/gabriel-costa.jpg" alt="Gabriel de Souza Costa">
+                    <img src="src/public/img/gabriel.jpeg" alt="Gabriel de Souza Costa">
                     <h3>Gabriel de Souza Costa</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/gabriel-feitoza.jpg" alt="Gabriel Feitoza da Silva">
+                    <img src="src/public/img/feitoza.jpeg" alt="Gabriel Feitoza da Silva">
                     <h3>Gabriel Feitoza da Silva</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/lucas.jpg" alt="Lucas Bento da Silva Batista">
+                    <img src="src/public/img/lucas.jpeg" alt="Lucas Bento da Silva Batista">
                     <h3>Lucas Bento da Silva Batista</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/maria.jpg" alt="Maria Eduarda Alves Selvatti">
+                    <img src="src/public/img/duda.jpeg" alt="Maria Eduarda Alves Selvatti">
                     <h3>Maria Eduarda Alves Selvatti</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
                 <a href="personas.php" class="card-persona">
-                    <img src="src/public/img/nathalie.jpg" alt="Nathalie Gonçalves Xavier">
+                    <img src="src/public/img/nath.jpeg" alt="Nathalie Gonçalves Xavier">
                     <h3>Nathalie Gonçalves Xavier</h3>
                     <p>Engenharia da Computação - IFSP</p>
                 </a>
