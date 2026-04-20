@@ -1,8 +1,8 @@
-<?php 
-    $css_especifico = 'quemsomos.css'; 
-    $titulo_pagina = 'Quem Somos';
-    include_once 'src/components/head.php'; 
-    include_once 'src/components/navbar.php'; 
+<?php
+$css_especifico = 'quemsomos.css';
+$titulo_pagina = 'Quem Somos';
+include_once 'src/components/head.php';
+include_once 'src/components/navbar.php';
 ?>
 
 <main class="page-content">
@@ -14,7 +14,7 @@
 
     <section class="detalhes-acoes">
         <h2>Como podemos ajudar nossos demandantes</h2>
-        
+
         <div id="consultoria" class="acao-detalhe">
             <h3>Consultoria</h3>
             <p>Avaliamos a infraestrutura tecnológica atual do cliente e sugerimos melhorias em arquitetura de software, bancos de dados e integração de sistemas.</p>
@@ -25,9 +25,9 @@
             <p>Ministramos oficinas e cursos rápidos focados em lógica de programação e ferramentas tecnológicas, voltados para escolas e instituições de ensino básico.</p>
         </div>
 
-        <div id="servicos" class="acao-detalhe">
-            <h3>Prestação de Serviço</h3>
-            <p>Desenvolvemos soluções sob medida, como interfaces web responsivas, integração de sensores (IoT) e estruturação de bancos de dados.</p>
+        <div id="solucao" class="acao-detalhe">
+            <h3>Desenvolvimento de solução</h3>
+            <p>Desenvolvimento de material para soluções desplugadas.</p>
         </div>
 
         <div id="projetos" class="acao-detalhe">

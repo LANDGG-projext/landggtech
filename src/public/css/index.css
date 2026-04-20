@@ -52,7 +52,7 @@
 }
 
 .logo-container img {
-    max-width: 450px;
+    max-width: 500px;
     width: 100%;
     height: auto;
     transition: all var(--transicao-padrao);
@@ -122,7 +122,7 @@
 @media (max-width: 768px) {
 
     .page-wrapper {
-        padding: 15px; 
+        padding: 15px;
     }
 
     .page-wrapper .container {
@@ -139,7 +139,7 @@
     .logo-container img {
         max-width: 200px;
     }
-    
+
     .logo-wrapper {
         margin-bottom: var(--espaco-md);
     }
@@ -163,19 +163,19 @@
         font-size: 0.6rem;
         gap: 6px;
     }
-    
+
     .separator {
         display: inline;
     }
 }
 
 @media (max-height: 650px) {
-    .logo-container img { 
-        max-width: 160px; 
+    .logo-container img {
+        max-width: 160px;
     }
-    .description { 
-        margin-bottom: var(--espaco-md); 
+    .description {
+        margin-bottom: var(--espaco-md);
     }
-    .page-wrapper .container { 
+    .page-wrapper .container {
         padding: var(--espaco-md); }
 }
