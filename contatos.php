@@ -1,43 +1,61 @@
-<?php 
-    $css_especifico = 'contatos.css'; 
+<?php
+    $css_especifico = 'contatos.css';
     $titulo_pagina = 'Contato';
-    include_once 'src/components/head.php'; 
-    include_once 'src/components/navbar.php'; 
+    include_once 'src/components/head.php';
+    include_once 'src/components/navbar.php';
 
     $mensagem_retorno = '';
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $nome = $_POST['nome'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $assunto = $_POST['assunto'] ?? '';
-        $conteudo = $_POST['conteudo'] ?? '';
+        // Limpeza básica de segurança contra XSS
+        $nome = htmlspecialchars(trim($_POST['nome'] ?? ''));
+        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+        $assunto = htmlspecialchars(trim($_POST['assunto'] ?? ''));
+        $conteudo = htmlspecialchars(trim($_POST['conteudo'] ?? ''));
 
-        $host = 'localhost';
-        $db   = 'landgg_startup';
-        $user = 'root';
-        $pass = '';
+        // Verifica se os campos principais não estão vazios
+        if (!empty($nome) && !empty($email) && !empty($conteudo)) {
 
-        try {
-            $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $pass);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            // ========================================================
+            // OPÇÃO 1: Enviar por E-mail
+            // (Pode falhar no localhost sem configuração de SMTP)
+            // ========================================================
+            $para = "contato@seudominio.com.br"; // Mude para seu e-mail
+            $corpo = "Nome: $nome\nE-mail: $email\nAssunto: $assunto\n\nMensagem:\n$conteudo";
+            $cabecalhos = "From: $email" . "\r\n" . "Reply-To: $email";
 
-            $stmt = $pdo->prepare("INSERT INTO mensagens (nome, email, assunto, conteudo) VALUES (?, ?, ?, ?)");
-            $stmt->execute([$nome, $email, $assunto, $conteudo]);
+            // Tenta enviar o e-mail usando a função nativa do PHP
+            if (mail($para, $assunto, $corpo, $cabecalhos)) {
+                $mensagem_retorno = "Mensagem enviada com sucesso!";
+            } else {
+                $mensagem_retorno = "Erro no envio por e-mail (servidor local pode não ter suporte).";
+            }
 
-            $mensagem_retorno = "Mensagem enviada com sucesso para o ScrumMaster!";
-        } catch (PDOException $e) {
-            $mensagem_retorno = "Erro no envio. Verifique a conexão com o banco de dados.";
+            // ========================================================
+            // OPÇÃO 2: Salvar em um arquivo .txt
+            // (Ótimo para debugar e ver a lógica funcionando localmente)
+            // Descomente o bloco abaixo para usar
+            // ========================================================
+            /*
+            $registro = "Data: " . date('d/m/Y H:i:s') . "\nNome: $nome\nEmail: $email\nAssunto: $assunto\nMensagem: $conteudo\n-----------------------\n";
+            if (file_put_contents('mensagens_locais.txt', $registro, FILE_APPEND)) {
+                $mensagem_retorno = "Mensagem registrada no arquivo com sucesso!";
+            }
+            */
+
+        } else {
+            $mensagem_retorno = "Por favor, preencha todos os campos corretamente.";
         }
     }
 ?>
 
 <main class="page-content">
     <div class="container-contato">
-        
+
         <div class="contato-info">
             <h1>Fale com a <span class="highlight">LANDGG</span></h1>
             <p>Tem dúvidas sobre nossas capacitações ou quer levar a lógica desplugada para sua instituição? Envie uma mensagem para o nosso ScrumMaster.</p>
-            
+
             <div class="info-detalhes">
                 <p>📍 IFSP Campus Guarulhos</p>
                 <p>📧 contato@landgg.com.br</p>
