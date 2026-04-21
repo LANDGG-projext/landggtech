@@ -20,7 +20,7 @@
             // OPÇÃO 1: Enviar por E-mail
             // (Pode falhar no localhost sem configuração de SMTP)
             // ========================================================
-            $para = "contato@seudominio.com.br"; // Mude para seu e-mail
+            $para = "andggprojetodeextensao@gmail.com"; // Mude para seu e-mail
             $corpo = "Nome: $nome\nE-mail: $email\nAssunto: $assunto\n\nMensagem:\n$conteudo";
             $cabecalhos = "From: $email" . "\r\n" . "Reply-To: $email";
 
