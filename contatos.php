@@ -22,7 +22,7 @@
             // ========================================================
             $para = "andggprojetodeextensao@gmail.com"; // Mude para seu e-mail
             $corpo = "Nome: $nome\nE-mail: $email\nAssunto: $assunto\n\nMensagem:\n$conteudo";
-            $cabecalhos = "From: $email" . "\r\n" . "Reply-To: $email";
+            $cabecalhos = "From: LANDGG Contato <contato@landgg.com.br>" . "\r\n" . "Reply-To: $email";
 
             // Tenta enviar o e-mail usando a função nativa do PHP (com supressão de erro)
             $email_enviado = @mail($para, $assunto, $corpo, $cabecalhos);
