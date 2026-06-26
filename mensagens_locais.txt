@@ -10,3 +10,9 @@ Email: teste@example.com
 Assunto: Testando
 Mensagem: Olá teste
 -----------------------
+Data: 26/06/2026 23:14:24
+Nome: Test User
+Email: test@example.com
+Assunto: Test Subject
+Mensagem: This is a test message to verify the contact form local fallback.
+-----------------------
