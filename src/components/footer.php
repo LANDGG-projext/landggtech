@@ -11,6 +11,7 @@
                 <li><a href="main.php">Portal</a></li>
                 <li><a href="quemsomos.php">Nossa História</a></li>
                 <li><a href="personas.php">Personas</a></li>
+                <li><a href="swot.php">Análise SWOT</a></li>
             </ul>
         </div>
         

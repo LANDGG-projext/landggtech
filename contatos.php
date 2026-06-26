@@ -24,24 +24,27 @@
             $corpo = "Nome: $nome\nE-mail: $email\nAssunto: $assunto\n\nMensagem:\n$conteudo";
             $cabecalhos = "From: $email" . "\r\n" . "Reply-To: $email";
 
-            // Tenta enviar o e-mail usando a função nativa do PHP
-            if (mail($para, $assunto, $corpo, $cabecalhos)) {
-                $mensagem_retorno = "Mensagem enviada com sucesso!";
-            } else {
-                $mensagem_retorno = "Erro no envio por e-mail (servidor local pode não ter suporte).";
-            }
+            // Tenta enviar o e-mail usando a função nativa do PHP (com supressão de erro)
+            $email_enviado = @mail($para, $assunto, $corpo, $cabecalhos);
 
-            // ========================================================
-            // OPÇÃO 2: Salvar em um arquivo .txt
-            // (Ótimo para debugar e ver a lógica funcionando localmente)
-            // Descomente o bloco abaixo para usar
-            // ========================================================
-            /*
-            $registro = "Data: " . date('d/m/Y H:i:s') . "\nNome: $nome\nEmail: $email\nAssunto: $assunto\nMensagem: $conteudo\n-----------------------\n";
-            if (file_put_contents('mensagens_locais.txt', $registro, FILE_APPEND)) {
-                $mensagem_retorno = "Mensagem registrada no arquivo com sucesso!";
+            // Verifica se está rodando localmente (localhost)
+            $is_localhost = in_array($_SERVER['REMOTE_ADDR'], ['127.0.0.1', '::1']) || ($_SERVER['SERVER_NAME'] ?? '') === 'localhost';
+
+            if ($email_enviado) {
+                $mensagem_retorno = "Mensagem enviada com sucesso!";
+            } elseif ($is_localhost) {
+                // ========================================================
+                // OPÇÃO 2: Salvar em um arquivo .txt (Apenas em localhost/ambiente de teste)
+                // ========================================================
+                $registro = "Data: " . date('d/m/Y H:i:s') . "\nNome: $nome\nEmail: $email\nAssunto: $assunto\nMensagem: $conteudo\n-----------------------\n";
+                if (file_put_contents('mensagens_locais.txt', $registro, FILE_APPEND)) {
+                    $mensagem_retorno = "Mensagem enviada com sucesso! (Registrada localmente no servidor de teste)";
+                } else {
+                    $mensagem_retorno = "Erro no envio da mensagem. Por favor, tente novamente.";
+                }
+            } else {
+                $mensagem_retorno = "Erro no envio da mensagem. Por favor, tente novamente.";
             }
-            */
 
         } else {
             $mensagem_retorno = "Por favor, preencha todos os campos corretamente.";

@@ -1,0 +1,12 @@
+Data: 26/06/2026 22:26:03
+Nome: Antigravity Test
+Email: test@example.com
+Assunto: Test Submission
+Mensagem: Hello LANDGG! This is a verification test.
+-----------------------
+Data: 26/06/2026 22:38:13
+Nome: Gabriel
+Email: teste@example.com
+Assunto: Testando
+Mensagem: Olá teste
+-----------------------
