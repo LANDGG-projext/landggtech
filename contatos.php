@@ -20,9 +20,16 @@
             // OPÇÃO 1: Enviar por E-mail
             // (Pode falhar no localhost sem configuração de SMTP)
             // ========================================================
+            // Obtém o domínio atual do servidor para evitar bloqueios de SPF e segurança do servidor de hospedagem
+            $dominio = $_SERVER['HTTP_HOST'];
+            $dominio = preg_replace('/^www\./', '', $dominio); // Limpa o 'www.' se houver
+            $remetente = "no-reply@" . $dominio;
+
             $para = "andggprojetodeextensao@gmail.com"; // Mude para seu e-mail
             $corpo = "Nome: $nome\nE-mail: $email\nAssunto: $assunto\n\nMensagem:\n$conteudo";
-            $cabecalhos = "From: LANDGG Contato <contato@landgg.com.br>" . "\r\n" . "Reply-To: $email";
+            $cabecalhos = "From: LANDGG Contato <$remetente>" . "\r\n" . 
+                          "Reply-To: $email" . "\r\n" .
+                          "X-Mailer: PHP/" . phpversion();
 
             // Tenta enviar o e-mail usando a função nativa do PHP (com supressão de erro)
             $email_enviado = @mail($para, $assunto, $corpo, $cabecalhos);
@@ -61,7 +68,7 @@
 
             <div class="info-detalhes">
                 <p>📍 IFSP Campus Guarulhos</p>
-                <p>📧 contato@landgg.com.br</p>
+                <p>📧 andggprojetodeextensao@gmail.com</p>
                 <p>⏰ Seg a Sex - 08h às 18h</p>
             </div>
         </div>
