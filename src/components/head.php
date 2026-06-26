@@ -15,6 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <?php if(isset($css_especifico)): ?>
-        <link rel="stylesheet" href="src/public/css/<?php echo $css_especifico; ?>">
+        <link rel="stylesheet" href="src/public/css/<?php echo $css_especifico; ?>?v=<?php echo filemtime('src/public/css/' . $css_especifico); ?>">
     <?php endif; ?>
 </head>

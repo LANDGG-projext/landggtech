@@ -1,3 +1,8 @@
+/* Container wide override for SWOT page */
+.container-swot-wide {
+    max-width: 1200px !important;
+}
+
 /* Header styling */
 .swot-header {
     text-align: center;
@@ -15,7 +20,52 @@
     font-size: 1.1rem;
 }
 
-/* Grid Layout */
+/* Main Tab Navigation */
+.swot-tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: var(--espaco-lg);
+    border-bottom: 1px solid var(--borda-clara);
+    padding-bottom: 20px;
+}
+
+.swot-tab-btn {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--borda-clara);
+    color: var(--texto-secundario);
+    padding: 12px 24px;
+    border-radius: var(--raio-sm);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: var(--transicao-padrao);
+}
+
+.swot-tab-btn:hover {
+    color: var(--texto-primario);
+    background: rgba(168, 124, 255, 0.08);
+    border-color: var(--roxo-claro);
+}
+
+.swot-tab-btn.active {
+    background: var(--gradiente-principal);
+    color: #FFFFFF;
+    border-color: transparent;
+    box-shadow: var(--sombra-roxa);
+}
+
+/* Tab Content Visibility */
+.swot-tab-content {
+    display: none;
+}
+
+.swot-tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 1. Startup SWOT Grid Layout */
 .swot-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -113,87 +163,385 @@
     transition: var(--transicao-padrao);
 }
 
-/* Forces - Green Accent */
-.swot-card.forces::before {
-    background: linear-gradient(90deg, #10B981, #34D399);
-}
-.swot-card.forces .card-icon {
-    background: rgba(16, 185, 129, 0.1);
-    color: #10B981;
-}
-.swot-card.forces:hover {
-    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.15);
-    border-color: rgba(16, 185, 129, 0.3);
-}
-.swot-card.forces .swot-list li::before {
-    color: #10B981;
-}
-.swot-card.forces:hover .card-icon {
-    background: #10B981;
-    color: #000000;
+/* Colors styling for SWOT - Unified Dark Purple Brand Palette */
+.swot-card::before { background: var(--roxo-escuro); }
+.swot-card .card-icon { background: rgba(112, 68, 214, 0.1); color: var(--roxo-escuro); }
+.swot-card:hover { box-shadow: var(--sombra-roxa-forte); border-color: var(--roxo-escuro); }
+.swot-card .swot-list li::before { color: var(--roxo-escuro); }
+.swot-card:hover .card-icon { background: var(--roxo-escuro); color: #FFFFFF; }
+
+
+/* 2. Team Explorer Layout */
+.team-explorer {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin-top: var(--espaco-md);
 }
 
-/* Weaknesses - Amber Accent */
-.swot-card.weaknesses::before {
-    background: linear-gradient(90deg, #F59E0B, #FBBF24);
-}
-.swot-card.weaknesses .card-icon {
-    background: rgba(245, 158, 11, 0.1);
-    color: #F59E0B;
-}
-.swot-card.weaknesses:hover {
-    box-shadow: 0 15px 30px rgba(245, 158, 11, 0.15);
-    border-color: rgba(245, 158, 11, 0.3);
-}
-.swot-card.weaknesses .swot-list li::before {
-    color: #F59E0B;
-}
-.swot-card.weaknesses:hover .card-icon {
-    background: #F59E0B;
-    color: #000000;
+/* Sidebar selector list */
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-/* Opportunities - Cyan Accent */
-.swot-card.opportunities::before {
-    background: linear-gradient(90deg, #06B6D4, #22D3EE);
-}
-.swot-card.opportunities .card-icon {
-    background: rgba(6, 182, 212, 0.1);
-    color: #06B6D4;
-}
-.swot-card.opportunities:hover {
-    box-shadow: 0 15px 30px rgba(6, 182, 212, 0.15);
-    border-color: rgba(6, 182, 212, 0.3);
-}
-.swot-card.opportunities .swot-list li::before {
-    color: #06B6D4;
-}
-.swot-card.opportunities:hover .card-icon {
-    background: #06B6D4;
-    color: #000000;
+.member-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--borda-clara);
+    border-radius: var(--raio-sm);
+    cursor: pointer;
+    transition: var(--transicao-padrao);
 }
 
-/* Threats - Rose Accent */
-.swot-card.threats::before {
-    background: linear-gradient(90deg, #F43F5E, #FB7185);
-}
-.swot-card.threats .card-icon {
-    background: rgba(244, 63, 94, 0.1);
-    color: #F43F5E;
-}
-.swot-card.threats:hover {
-    box-shadow: 0 15px 30px rgba(244, 63, 94, 0.15);
-    border-color: rgba(244, 63, 94, 0.3);
-}
-.swot-card.threats .swot-list li::before {
-    color: #F43F5E;
-}
-.swot-card.threats:hover .card-icon {
-    background: #F43F5E;
-    color: #000000;
+.member-selector img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid transparent;
+    transition: var(--transicao-padrao);
 }
 
-/* Responsive adjustment */
+.member-selector-info h3 {
+    font-size: 0.95rem;
+    color: var(--texto-primario);
+    margin-bottom: 2px;
+    font-weight: 600;
+}
+
+.member-selector-info span {
+    font-size: 0.75rem;
+    color: var(--texto-secundario);
+}
+
+.member-selector:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(168, 124, 255, 0.3);
+}
+
+.member-selector.active {
+    background: rgba(112, 68, 214, 0.12);
+    border-color: var(--roxo-claro);
+    box-shadow: 0 0 15px rgba(112, 68, 214, 0.2);
+}
+
+.member-selector.active img {
+    border-color: var(--roxo-claro);
+}
+
+/* Details area */
+.member-details-container {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--borda-clara);
+    border-radius: var(--raio-md);
+    padding: var(--espaco-lg);
+    min-height: 500px;
+    position: relative;
+}
+
+.member-detail-content {
+    display: none;
+}
+
+.member-detail-content.active {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Left Column: Personal info & Badges */
+.member-card-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid var(--borda-clara);
+    padding-right: 30px;
+}
+
+.member-card-left img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--roxo-escuro);
+    margin-bottom: var(--espaco-md);
+    box-shadow: var(--sombra-roxa);
+}
+
+.member-card-left h2 {
+    font-size: 1.4rem;
+    color: var(--texto-primario);
+    margin-bottom: 4px;
+}
+
+.member-card-left .member-role {
+    font-size: 0.9rem;
+    color: var(--roxo-claro);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.member-card-left .member-course {
+    font-size: 0.8rem;
+    color: var(--texto-secundario);
+    margin-bottom: 16px;
+}
+
+.score-badge-circle {
+    background: var(--gradiente-principal);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: var(--espaco-md);
+    box-shadow: var(--sombra-roxa);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.member-section-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--texto-primario);
+    font-weight: 700;
+    align-self: flex-start;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--roxo-escuro);
+    padding-bottom: 4px;
+    width: 100%;
+    text-align: left;
+}
+
+.member-bio, .member-responsibilities {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.tech-tag {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--borda-clara);
+    color: var(--texto-secundario);
+    padding: 4px 10px;
+    border-radius: 50px;
+    transition: var(--transicao-padrao);
+}
+
+.tech-tag:hover {
+    background: rgba(168, 124, 255, 0.15);
+    color: var(--texto-primario);
+    border-color: var(--roxo-claro);
+}
+
+/* Right Column: SWOT & Soft Skills */
+.member-card-right {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Nested SWOT lists for members */
+.mini-swot-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.mini-swot-card {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid var(--borda-clara);
+    border-radius: var(--raio-sm);
+    padding: 16px;
+    position: relative;
+    padding-top: 22px;
+}
+
+.mini-swot-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    border-radius: var(--raio-sm) 0 0 var(--raio-sm);
+}
+
+.mini-swot-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--texto-primario);
+}
+
+.mini-swot-card::before { 
+    background: var(--roxo-escuro); 
+}
+.mini-swot-card h3 { 
+    color: var(--roxo-escuro); 
+}
+
+.mini-swot-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mini-swot-list li {
+    font-size: 0.85rem;
+    color: var(--texto-secundario);
+    line-height: 1.4;
+    position: relative;
+    padding-left: 14px;
+}
+
+.mini-swot-list li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    top: -1px;
+    font-size: 0.8rem;
+}
+
+.mini-swot-list li::before { 
+    color: var(--roxo-escuro); 
+}
+
+/* Soft Skills Progress bars */
+.soft-skills-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--texto-primario);
+    border-left: 3px solid var(--roxo-claro);
+    padding-left: 10px;
+}
+
+.soft-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 25px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    border-radius: var(--raio-sm);
+    padding: 12px;
+    transition: var(--transicao-padrao);
+}
+
+.skill-item:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(168, 124, 255, 0.1);
+}
+
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+}
+
+.skill-name {
+    color: var(--texto-primario);
+    font-weight: 600;
+}
+
+.skill-value {
+    color: var(--roxo-claro);
+    font-weight: 700;
+}
+
+.skill-progress-bg {
+    height: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: var(--gradiente-principal);
+    border-radius: 4px;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill-actions {
+    font-size: 0.72rem;
+    color: var(--texto-secundario);
+    line-height: 1.4;
+    padding-top: 6px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.05);
+}
+
+.skill-actions strong {
+    color: rgba(255, 255, 255, 0.6);
+    display: block;
+    margin-bottom: 2px;
+}
+
+.skill-actions ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skill-actions li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 2px;
+}
+
+.skill-actions li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--roxo-claro);
+    font-weight: 700;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .member-detail-content.active {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .member-card-left {
+        border-right: none;
+        border-bottom: 1px solid var(--borda-clara);
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .swot-grid {
         grid-template-columns: 1fr;
@@ -201,6 +549,54 @@
     }
     
     .swot-card {
+        padding: var(--espaco-md);
+    }
+
+    .team-explorer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .members-list {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: var(--roxo-escuro) transparent;
+    }
+    
+    .member-selector {
+        flex-shrink: 0;
+        width: auto;
+        padding: 8px 12px;
+        scroll-snap-align: start;
+    }
+
+    .member-selector img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .member-selector-info h3 {
+        font-size: 0.85rem;
+    }
+    
+    .member-selector-info span {
+        display: none;
+    }
+
+    .mini-swot-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .soft-skills-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .member-details-container {
         padding: var(--espaco-md);
     }
 }
